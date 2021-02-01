@@ -28,9 +28,21 @@
 	<script src="https://unpkg.com/@codersrank/summary@x.x.x/codersrank-summary.min.js"></script>
 	<script src="https://unpkg.com/@codersrank/skills-chart@x.x.x/codersrank-skills-chart.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 	<link rel="stylesheet" href="css/splide.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+
+
+	<script src="js/jquery-3.0.0.min.js"></script>
+	<script src="js/plugin.js"></script>
+	<!-- sidebar -->
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/custom.js"></script>
+	<!-- javascript -->
+	<script src="js/owl.carousel.js"></script>
+	<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+	<script src="js/bootstrap.bundle.js"></script>
+	<script src="js/bootstrap.js"></script>
 </head>
 <style>
 	.carousel-indicators .active{
@@ -42,6 +54,21 @@
 	.splide__slide img{
 		width:100%;
 		height: auto;
+	}
+	.profile_image{
+		height:300px;
+		width:auto;
+	}
+	.modal-dialog{
+		max-width: 1800px;
+		overflow-y: auto;
+		max-height: 900px;
+	}
+	.modal-content{
+		background-color: #555;
+	}
+	.modal-body{
+		overflow-y: auto;
 	}
 </style>
 <body>
@@ -136,88 +163,34 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
-					<div class="about_inner">
+					<div class="about_inner" onclick="pedagog_modal_toggle()">
 						<div class="icon"><a href="#" onclick="$('#pedagog_modal').modal('show');"></a></div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="about_inner" onclick="alpine_modal_toggle()">
+						<div class="icon">
+							<span>Alpinebi</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="about_inner" onclick="ezae_modal_toggle()">
+						<div class="icon"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="choose_section_2">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="about_inner">
-						<div class="icon"><a href="#"><img src="images/icon-4.png"></a></div>
-						<h2 class="totaly_text">Shared Hosting</h2>
-						<p class="making">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit
-							amet orci.</p>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="about_inner">
-						<div class="icon"><a href="#"><img src="images/icon-5.png"></a></div>
-						<h2 class="totaly_text">Dedicated Hosting</h2>
-						<p class="making">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit
-							amet orci.</p>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="about_inner">
-						<div class="icon"><a href="#"><img src="images/icon-6.png"></a></div>
-						<h2 class="totaly_text">Domain Registration</h2>
-						<p class="making">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit
-							amet orci.</p>
-					</div>
-				</div>
-			</div>
-			<!-- <div class="bt_main">
-				<button class="read_more"><a href="#">Read More</a></button>
-			</div> -->
-		</div>
-	</div>
-	<div class="choose_section_2">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="about_inner">
-						<div class="icon"><a href="#"><img src="images/icon-4.png"></a></div>
-						<h2 class="totaly_text">Shared Hosting</h2>
-						<p class="making">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit
-							amet orci.</p>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="about_inner">
-						<div class="icon"><a href="#"><img src="images/icon-5.png"></a></div>
-						<h2 class="totaly_text">Dedicated Hosting</h2>
-						<p class="making">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit
-							amet orci.</p>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="about_inner">
-						<div class="icon"><a href="#"><img src="images/icon-6.png"></a></div>
-						<h2 class="totaly_text">Domain Registration</h2>
-						<p class="making">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit
-							amet orci.</p>
-					</div>
-				</div>
-			</div>
-			<!-- <div class="bt_main">
-				<button class="read_more"><a href="#">Read More</a></button>
-			</div> -->
-		</div>
-	</div>
+	
+	
 	<!-- service end -->
 	<!-- contact start -->
 	<div id="contact" class="contact_section">
 		<div class="container">
 			<div class="col-sm-12">
-				<h1 class="choose_text">Request A Call Back</h1>
-				<p class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority
-					have suffered alteration in some form, by injected humour</p>
+				<h1 class="choose_text">Contact Me</h1>
 			</div>
 		</div>
 	</div>
@@ -227,7 +200,7 @@
 				<div class="col-md-6">
 					<div class="input_main">
 						<div class="container">
-							<form action="/action_page.php">
+							<form action="mailto:rajkaran.singh.grewal5@gmail.com" enctype="text/plain">
 								<div class="form-group">
 									<input type="text" class="email-bt" placeholder="Name" name="Name">
 								</div>
@@ -241,11 +214,11 @@
 									<textarea class="massage-bt" placeholder="Massage" rows="5" id="comment"
 										name="text"></textarea>
 								</div>
+							
+								<div class="send_btn">
+									<button type="submit" class="main_bt">Send</button>
+								</div>
 							</form>
-
-						</div>
-						<div class="send_btn">
-							<button type="button" class="main_bt"><a href="#">Send</a></button>
 						</div>
 					</div>
 				</div>
@@ -333,18 +306,7 @@
 
 	<!-- contact end -->
 	<!-- Javascript files-->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/popper.min.js"></script>
-
-
-	<script src="js/jquery-3.0.0.min.js"></script>
-	<script src="js/plugin.js"></script>
-	<!-- sidebar -->
-	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="js/custom.js"></script>
-	<!-- javascript -->
-	<script src="js/owl.carousel.js"></script>
-	<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+	
 	<script>
 		$(document).ready(function () {
 			$(".fancybox").fancybox({
@@ -370,35 +332,43 @@
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<div class="col-4">
-						<img src="images/pedagog/pedagog_home.png">
+					<div class="col-3 profile_image_container">
+						<img src="images/pedagog/pedagog_home.png" class="profile_image">
 					</div>
-					<div class="col-4">
-						<img src="images/pedagog/pedgog_course_view.png">
+					<div class="col-1"></div>
+					<div class="col-3 profile_image_container">
+						<img src="images/pedagog/pedgog_course_view.png" class="profile_image">
 					</div>
-					<div class="col-4">
-						<img src="images/pedagog/Student_dashboard.png">
+					<div class="col-1"></div>
+					<div class="col-3 profile_image_container">
+						<img src="images/pedagog/Student_dashboard.png" class="profile_image">
 					</div>
+					<div class="col-1"></div>
 				</div>
 				<div class="row">
-					<div class="col-4">
-						<img src="images/pedagog/Messenging_Student_dashboard.png">
+					<div class="col-3 profile_image_container">
+						<img src="images/pedagog/Messenging_Student_dashboard.png" class="profile_image">
 					</div>
-					<div class="col-4">
-						<img src="images/pedagog/Student_chat_logs.png">
+					<div class="col-1"></div>
+					<div class="col-3 profile_image_container">
+						<img src="images/pedagog/Student_chat_logs.png" class="profile_image">
 					</div>
-					<div class="col-4">
-						<img src="images/pedagog/Mobile_home_screen.png">
+					<div class="col-1"></div>
+					<div class="col-3 profile_image_container">
+						<img src="images/pedagog/Mobile_home_screen.png" class="profile_image">
 					</div>
+					<div class="col-1"></div>
 				</div>
 				<div class="row">
-					<div class="col-4">
-						<img src="images/pedagog/Mobile_course_page.png">
+					<div class="col-3 profile_image_container">
+						<img src="images/pedagog/Mobile_course_page.png" class="profile_image">
 					</div>
-					<div class="col-4">
-						<img src="images/pedagog/Mobile_student_messages.png">
+					<div class="col-1"></div>
+					<div class="col-3 profile_image_container" >
+						<img src="images/pedagog/Mobile_student_messages.png" class="profile_image">
 					</div>
-					<div class="col-4"></div>
+					<div class="col-1"></div>
+					<div class="col-3"></div>
 				</div>
 			</div>
 			<div class="modal-footer">
@@ -415,14 +385,14 @@
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<div class="col-4">
-						<img src="images/AlpineBi/Landing_page.png">
+					<div class="col-3 profile_image_container">
+						<img src="images/AlpineBi/Landing_page.png" class="profile_image">
 					</div>
-					<div class="col-4">
-						<img src="images/AlpineBi/Home_page.png">
+					<div class="col-3 profile_image_container">
+						<img src="images/AlpineBi/Home_page.png" class="profile_image">
 					</div>
-					<div class="col-4">
-						<img src="images/AlpineBi/Basic_form.png">
+					<div class="col-3 profile_image_container">
+						<img src="images/AlpineBi/Basic_form.png" class="profile_image">
 					</div>
 				</div>
 			</div>
@@ -438,27 +408,45 @@
 			<div class="modal-header">
 				<h5>Ezae</h5>
 			</div>
-		</div>
-		<div class="modal-body">
-			<div class="row">
-				<div class="col-4">
-					<img src="images/Ezae/Landing_Page.png">
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-3 profile_image_container">
+						<img src="images/Ezae/Landing_Page.png" class="profile_image">
+					</div>
+					<div class="col-1"></div>
+					<div class="col-3 profile_image_container">
+						<img src="images/Ezae/main_page.png" class="profile_image">
+					</div>
+					<div class="col-1"></div>
+					<div class="col-3 profile_image_container">
+						<img src="images/Ezae/Modules_page.png" class="profile_image">
+					</div>
 				</div>
-				<div class="col-4">
-					<img src="images/Ezae/main_page.png">
-				</div>
-				<div class="col-4">
-					<img src="images/Ezae/Modules_page.png">
+				<div class="row">
+					<div class="col-3 profile_image_container">
+						<img src="images/Ezae/Create_learning_plan_page.png" class="profile_image">
+					</div>
+					<div class="col-1"></div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-4">
-					<img src="images/Ezae/Create_learning_plan_page.png">
-				</div>
+			<div class="modal-footer">
+				<a class="btn btn-primary" href="https://www.ezae.in">Visit Link</a>
 			</div>
 		</div>
 	</div>
 </div>
+<script>
+	let pedagog_modal_toggle = () => {
+		
+		$("#pedagog_modal").modal("toggle");
+	}
+	let alpine_modal_toggle = () => {
+		$("#alpine_modal").modal("toggle");
+	}
+	let ezae_modal_toggle = () => {
+		$("#ezae_modal").modal("toggle");
+	}
+</script>
 </body>
 
 </html>
