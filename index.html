@@ -43,41 +43,41 @@
 	<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 	<script src="js/bootstrap.bundle.js"></script>
 	<script src="js/bootstrap.js"></script>
+    <style>
+	    .carousel-indicators .active{
+		    background-color: #999999;
+	    }
+	    .carousel-indicators li{
+		    background-color: #000000;
+	    }
+	    .splide__slide img{
+	    	width:100%;
+		    height: auto;
+	    }
+	    .profile_image{
+		    height:300px;
+		    width:auto;
+	    }
+	    .modal-dialog{
+		    max-width: 1800px;
+		    overflow-y: auto;
+		    max-height: 900px;
+	    }
+	    .modal-content{
+		    background-color: #555;
+	    }
+	    .modal-body{
+		    overflow-y: auto;
+	    }
+	    .menu_text li{
+		    float:left;
+		    padding-left:5px;
+	    }
+	    .menu_text {
+	    	width: 65%;
+	    }
+    </style>
 </head>
-<style>
-	.carousel-indicators .active{
-		background-color: #999999;
-	}
-	.carousel-indicators li{
-		background-color: #000000;
-	}
-	.splide__slide img{
-		width:100%;
-		height: auto;
-	}
-	.profile_image{
-		height:300px;
-		width:auto;
-	}
-	.modal-dialog{
-		max-width: 1800px;
-		overflow-y: auto;
-		max-height: 900px;
-	}
-	.modal-content{
-		background-color: #555;
-	}
-	.modal-body{
-		overflow-y: auto;
-	}
-	.menu_text li{
-		float:left;
-		padding-left:5px;
-	}
-	.menu_text {
-		width: 65%;
-	}
-</style>
 <body>
 	<header id="home" class="section">
 		<div class="header_main">
@@ -88,9 +88,6 @@
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
 							<div class="full">
 								<div class="center-desk">
-									<div class="logo"><a href="#home"><img src="images/logo.png"
-												style="max-width: 100%;"></a>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -119,20 +116,22 @@
 							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
 								<div class="taital_main">
 								</div>
-								<h1 class="web_text"><strong>Unlimited Web Hosting</strong></h1>
-								<p class="donec_text">I am a full stack web developer.</p>
-								<a class="get_bg" href="#" role="button">Get Started</a>
-								<a class="btn btn-lg btn-dark" href="about.html" role="button">Contact Us</a>
+								<h1 class="web_text"><strong>Rajkaran Singh Grewal</strong></h1>
+								<p class="donec_text">I am a programmer that can work on full-stack development and IOT projects. I have 5+ years of programming experience and I love to problem solve. Any time I don't know how to solve the problem I will find a way to solve to problem. </p>
 							</div>
 							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
 								<div class="img-box">
-									<figure><img src="images/woofer.png" alt="img" / style="max-width: 100%;"></figure>
+									<figure>
+									    <img src="images/woofer.png" alt="img" 
+									        style="max-width: 100%;">
+							        </figure>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+		</div>
 	</header>
 	<!-- banner end -->
 	<!-- choose start -->
@@ -140,9 +139,7 @@
 		<div class="container">
 			<div class="col-sm-12">
 				<h1 class="color choose_text">About <span class="" style="color:black">Me</span></h1>
-				<p class="lorem_text">Making it look like readable English. Many desktop publishing packages and web
-					page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
-					uncover any web sites still</p>
+				<p class="lorem_text">My programming skills are below they have been calculated by codersrank.</p>
 			</div>
 		</div>
 	</div>
@@ -153,6 +150,14 @@
 			</div>
 			<div class="row">
 				<codersrank-skills-chart username=tomaicazyx labels=true legend=true tooltip=true></codersrank-skills-chart>
+			</div>
+		</div>
+	</div>
+	<div id="education" class="choose_section">
+		<div class="container">
+			<div class="col-sm-12">
+				<h1 class="color choose_text">Education</h1>
+				<p class="lorem_text">I have completed my Bachelor of Computer Application from Gurgarn wala guru nanak Khalsa College.</p>
 			</div>
 		</div>
 	</div>
@@ -171,19 +176,23 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="about_inner" onclick="pedagog_modal_toggle()">
-						<div class="icon"><a href="#" onclick="$('#pedagog_modal').modal('show');"></a></div>
+						<div class="icon">
+						    <img src="images/pedagog/pedagog_logo.png"/>
+						</div>
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<div class="about_inner" onclick="alpine_modal_toggle()">
 						<div class="icon">
-							<span>Alpinebi</span>
+							<img src="images/Alpine/Alpine_logo.png"/>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<div class="about_inner" onclick="ezae_modal_toggle()">
-						<div class="icon"></div>
+						<div class="icon">
+						    <img src="images/ezae/ezae_logo.png"/>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -254,11 +263,24 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="menu_text">
-									<ul >
-										<li><a href="#"><img src="images/in-icon.png"></a></li>
-									</ul>
+								<div class="map_main">
+									<img src="images/in-icon.png">
+									<span class="londan_text"></span>
 								</div>
+							</div>
+							<div class="row">
+							    <div class="map_main">
+							        <img class="images/github-icon.png">
+							        <a class="londan_text" src="www.github.com/Rajkaran-Singh-Grewal">www.github.com/Rajkaran-Singh-Grewal
+							        </a>
+							    </div>
+							</div>
+							<div class="row">
+							    <div class="map_main">
+							        <img src="images/codersrank-icon.png">
+							        <a class="londan_text" src="www.codersrank.com/Rajkaran-Singh-Grewal">www.codersrank.com/Rajkaran-Singh-Grewal
+							        </a>
+							    </div>
 							</div>
 						</div>
 					</div>
@@ -266,12 +288,6 @@
 			</div>
 		</div>
 	</div>
-	
-			
-		</div>
-	</div>
-
-
 	<!-- contact end -->
 	<!-- Javascript files-->
 	
